@@ -428,13 +428,13 @@ jupyter notebook Q3_CycleGAN/cyclegan_notebook.ipynb
 
 <div align="center">
 
-<img src="https://cdn-avatars.huggingface.co/v1/production/uploads/6925e08ccea6c0c0bb678696/-spNCIbwfOZvCujMFSXrf.jpeg" width="100" style="border-radius: 50%;" alt="Faiez Tariq"/>
+<img src="[https://cdn-avatars.huggingface.co/v1/production/uploads/6925e08ccea6c0c0bb678696/-spNCIbwfOZvCujMFSXrf.jpeg](https://avatars.githubusercontent.com/thecallmeBilalAshiq)" width="100" style="border-radius: 50%;" alt="Faiez Tariq"/>
 
 ### **Faiez Tariq**
 
-[![GitHub](https://img.shields.io/badge/GitHub-faiez123tariq-181717?style=for-the-badge&logo=github)](https://github.com/faiez123tariq)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-faieztariq-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/faieztariq)
-[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-Faiezeee-FFD21E?style=for-the-badge)](https://huggingface.co/Faiezeee)
+[![GitHub](https://img.shields.io/badge/GitHub-BilalAshiq-181717?style=for-the-badge&logo=github)](https://github.com/thecallmeBilalAshiq)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-BilalAshiq-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/bilal-ashiq)
+[![HuggingFace](https://img.shields.io/badge/🤗%20HuggingFace-BilalAshiq-FFD21E?style=for-the-badge)](https://huggingface.co/methebilalashiq)
 
 *Open to Collaboration*
 
