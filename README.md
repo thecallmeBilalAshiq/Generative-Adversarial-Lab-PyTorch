@@ -12,6 +12,9 @@
 
 <br/>
 
+
+![](https://i.imgur.com/waxVImv.png)
+
 > **Three production-ready GAN experiments** — covering unconditional generation, paired image translation, and unpaired domain adaptation — each trained on Kaggle T4×2 GPUs and deployed as live interactive Gradio apps on HuggingFace Spaces.
 
 <br/>
@@ -385,7 +388,7 @@ torch.save(model.module.state_dict(), 'weights.pt')   # NOT model.state_dict()
 | **Q2** | [🤗 Sketch To Image Generator](https://huggingface.co/spaces/Faiezeee/Sketch_To_Image_Generator) | Convert sketches to realistic face/anime photos | ![Running](https://img.shields.io/badge/Status-Running-22c55e?style=flat-square) |
 | **Q3** | [🤗 CycleGAN Image↔Sketch Converter](https://huggingface.co/spaces/Faiezeee/CYCLEGAN_Image-Sketch-Image_Converter) | Bidirectional unpaired domain translation | ![Running](https://img.shields.io/badge/Status-Running-22c55e?style=flat-square) |
 
-**[→ View all spaces on HuggingFace](https://huggingface.co/Faiezeee)**
+**[→ View all spaces on HuggingFace](https://huggingface.co/methebilalashiq)**
 
 </div>
 
@@ -422,15 +425,15 @@ jupyter notebook Q2_Pix2Pix/pix2pix_improved.ipynb
 jupyter notebook Q3_CycleGAN/cyclegan_notebook.ipynb
 ```
 
----
+![](https://i.imgur.com/waxVImv.png)
 
 ## 👤 Author
 
 <div align="center">
 
-<img src="[https://cdn-avatars.huggingface.co/v1/production/uploads/6925e08ccea6c0c0bb678696/-spNCIbwfOZvCujMFSXrf.jpeg](https://avatars.githubusercontent.com/thecallmeBilalAshiq)" width="100" style="border-radius: 50%;" alt="Faiez Tariq"/>
+<img src="https://avatars.githubusercontent.com/thecallmeBilalAshiq" width="100" style="border-radius: 50%;" alt="Muhammad Bilal Ashiq"/>
 
-### **Faiez Tariq**
+### **Muhammad Bilal Ashiq**
 
 [![GitHub](https://img.shields.io/badge/GitHub-BilalAshiq-181717?style=for-the-badge&logo=github)](https://github.com/thecallmeBilalAshiq)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-BilalAshiq-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/bilal-ashiq)
