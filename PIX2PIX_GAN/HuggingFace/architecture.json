@@ -1,0 +1,175 @@
+{
+  "model_type": "Pix2Pix_UNet_Generator",
+  "description": "Conditional GAN (Pix2Pix) \u2014 Sketch to Realistic/Colorized Image",
+  "tasks": {
+    "face": "Face Sketch \u2192 Realistic Photo (CUHK CUFS)",
+    "anime": "Anime Sketch \u2192 Colorized Image"
+  },
+  "generator": {
+    "class": "UNetGenerator",
+    "in_ch": 3,
+    "out_ch": 3,
+    "ngf": 64,
+    "input_range": "[-1, 1]",
+    "output_range": "[-1, 1]",
+    "output_activation": "Tanh",
+    "encoder_blocks": [
+      {
+        "name": "e1",
+        "in": 3,
+        "out": 64,
+        "use_bn": false,
+        "note": "256->128"
+      },
+      {
+        "name": "e2",
+        "in": 64,
+        "out": 128,
+        "use_bn": true,
+        "note": "128->64"
+      },
+      {
+        "name": "e3",
+        "in": 128,
+        "out": 256,
+        "use_bn": true,
+        "note": "64->32"
+      },
+      {
+        "name": "e4",
+        "in": 256,
+        "out": 512,
+        "use_bn": true,
+        "note": "32->16"
+      },
+      {
+        "name": "e5",
+        "in": 512,
+        "out": 512,
+        "use_bn": true,
+        "note": "16->8"
+      },
+      {
+        "name": "e6",
+        "in": 512,
+        "out": 512,
+        "use_bn": true,
+        "note": "8->4"
+      },
+      {
+        "name": "e7",
+        "in": 512,
+        "out": 512,
+        "use_bn": true,
+        "note": "4->2"
+      },
+      {
+        "name": "e8",
+        "in": 512,
+        "out": 512,
+        "use_bn": false,
+        "note": "2->1 bottleneck"
+      }
+    ],
+    "decoder_blocks": [
+      {
+        "name": "d1",
+        "in": 512,
+        "out": 512,
+        "dropout": true,
+        "note": "1->2"
+      },
+      {
+        "name": "d2",
+        "in": 1024,
+        "out": 512,
+        "dropout": true,
+        "note": "2->4  + skip e7"
+      },
+      {
+        "name": "d3",
+        "in": 1024,
+        "out": 512,
+        "dropout": true,
+        "note": "4->8  + skip e6"
+      },
+      {
+        "name": "d4",
+        "in": 1024,
+        "out": 512,
+        "dropout": false,
+        "note": "8->16 + skip e5"
+      },
+      {
+        "name": "d5",
+        "in": 1024,
+        "out": 256,
+        "dropout": false,
+        "note": "16->32+ skip e4"
+      },
+      {
+        "name": "d6",
+        "in": 512,
+        "out": 128,
+        "dropout": false,
+        "note": "32->64+ skip e3"
+      },
+      {
+        "name": "d7",
+        "in": 256,
+        "out": 64,
+        "dropout": false,
+        "note": "64->128+skip e2"
+      },
+      {
+        "name": "d8",
+        "in": 128,
+        "out": 3,
+        "dropout": false,
+        "note": "128->256+skip e1 -> Tanh"
+      }
+    ]
+  },
+  "discriminator": {
+    "class": "PatchGANDiscriminator",
+    "note": "Not needed for inference \u2014 excluded from deployment",
+    "in_ch": 3,
+    "ndf": 64,
+    "type": "16x16 PatchGAN (conditional)"
+  },
+  "training": {
+    "img_size": 256,
+    "batch_size": 16,
+    "epochs": 15,
+    "lr": 0.0002,
+    "betas": [
+      0.5,
+      0.999
+    ],
+    "lambda_l1": 100,
+    "optimizer": "Adam",
+    "mixed_precision": "AMP"
+  },
+  "preprocessing": {
+    "resize": [
+      256,
+      256
+    ],
+    "interpolation": "BICUBIC",
+    "normalize_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "normalize_std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "convert": "RGB"
+  },
+  "weight_files": {
+    "face": "generator_face.pth",
+    "anime": "generator_anime.pth"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "NZ": 100,
+  "NGF": 64,
+  "NDF": 64,
+  "NC": 3,
+  "IMAGE_SIZE": 64,
+  "DATASET": "anime",
+  "DCGAN_EPOCHS": 17,
+  "WGAN_EPOCHS": 17,
+  "dcgan_final_g_loss": 3.46,
+  "dcgan_final_d_loss": 0.6156,
+  "wgan_final_g_loss": 92.8491,
+  "wgan_final_c_loss": -10.5891
+}

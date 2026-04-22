@@ -1,0 +1,10 @@
+{
+  "IMG_SIZE": 128,
+  "N_RESBLOCKS": 6,
+  "LAMBDA_CYCLE": 10.0,
+  "LAMBDA_ID": 5.0,
+  "ssim_cycle_A": 0.9404,
+  "psnr_cycle_A": 27.94,
+  "ssim_cycle_B": 0.7413,
+  "psnr_cycle_B": 20.52
+}
